@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: ZN-M2 wifi
+name: RAX3000M
 
 on:
   repository_dispatch:
@@ -20,17 +20,17 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/wenpo1975/ipq6000-wifi.git
-  REPO_BRANCH: wifi
+  REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
+  REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: ./config/cmiot_ax18/ZN-M2 wifi-china.config
-  DIY_P1_SH: ./custom/cmiot_ax18/plus/diy-part1.sh
-  DIY_P2_SH: ./custom/cmiot_ax18/plus/diy-part2.sh
+  CONFIG_FILE: .config
+  DIY_P1_SH: diy-part1.sh
+  DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
-  UPLOAD_RELEASE: true
+  UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
 
 jobs:
